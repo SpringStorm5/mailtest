@@ -2,11 +2,14 @@ package tests;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
+import org.apache.log4j.Logger;
 import pages.LoginPage;
 import pages.MailPage;
 import pages.WebDriverSingleton;
 @Test
 public class SendMailTest {
+
+    final static Logger logger = Logger.getLogger(SendMailTest.class);
 
     private WebDriver webDriver;
     private LoginPage loginPage;
@@ -24,19 +27,19 @@ public class SendMailTest {
     {
         webDriver = WebDriverSingleton.getInstance();
         loginPage = new LoginPage(webDriver);
-        System.out.println("Заходим на сайт mail.ru");
+        logger.info("Заходим на сайт mail.ru");
         webDriver.get(baseURL);
     }
 
     public void sentmailtest() throws InterruptedException {
         webDriver = WebDriverSingleton.getInstance();
         loginPage = new LoginPage(webDriver);
-        System.out.println("Вводим логин и пароль");
+        logger.info("Вводим логин и пароль");
         loginPage.enterLoginAndPass(login, password);
-        System.out.println("Нажимаем кнопку Войти");
+        logger.info("Нажимаем кнопку Войти");
         loginPage.clickEnterButton();
         mailPage = new MailPage(webDriver);
-        System.out.println("Заполняем  адрес:" + " " +  adress  + " " + "тема:" + " " + subject + " " + "текст пісьма" + " " +  text + " " + "и отправляем с проверкой");
+        logger.info("Заполняем  адрес:" + " " +  adress  + " " + "тема:" + " " + subject + " " + "текст пісьма" + " " +  text + " " + "и отправляем с проверкой");
         mailPage.sendMessage(adress,subject,text);
         webDriver.quit();
     }

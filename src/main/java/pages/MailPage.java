@@ -56,8 +56,7 @@ public class MailPage  {
              WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.className("compose-button__txt")));
              button_write_message.click();
 
-
-            Thread.sleep(1000);
+             WebElement inpet = wait.until(ExpectedConditions.elementToBeClickable(input_addressees));
             input_addressees.clear();
             input_addressees.sendKeys(address);
 
@@ -69,7 +68,7 @@ public class MailPage  {
 
             WebElement msg_sent = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a.layer__link")));
             boolean check = message_sent.isDisplayed();
-            System.out.println("Письмо успешно отправлено" + " " +  check);
+           // System.out.println("Письмо успешно отправлено" + " " +  check);
             Assert.assertTrue(check);
         }
 

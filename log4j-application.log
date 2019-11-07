@@ -1,0 +1,8 @@
+2019-11-07 12:39:07 INFO  SendMailTest:31 - Заходим на сайт mail.ru
+2019-11-07 12:39:07 INFO  SendMailTest:39 - Вводим логин и пароль
+2019-11-07 12:39:13 INFO  SendMailTest:42 - Нажимаем кнопку Войти
+2019-11-07 12:39:13 INFO  SendMailTest:46 - Заполняем  адрес: springstorm666@gmail.com тема: test theme текст пісьма body test text и отправляем с проверкой
+2019-11-07 12:40:14 INFO  SendMailTest:30 - Заходим на сайт mail.ru
+2019-11-07 12:40:15 INFO  SendMailTest:37 - Вводим логин и пароль
+2019-11-07 12:40:21 INFO  SendMailTest:39 - Нажимаем кнопку Войти
+2019-11-07 12:40:21 INFO  SendMailTest:42 - Заполняем  адрес: springstorm666@gmail.com тема: test theme текст пісьма body test text и отправляем с проверкой
